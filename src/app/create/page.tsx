@@ -57,15 +57,21 @@ export default function CreateProductPage() {
               </Link>
             </div>
             <div className="flex space-x-4">
-              <Link
-                href="/"
-                className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
-              >
-                Accueil
-              </Link>
-              <span className="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium">
-                Créer un produit
-              </span>
+                             <Link
+                 href="/"
+                 className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+               >
+                 Accueil
+               </Link>
+               <span className="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium">
+                 Créer un produit
+               </span>
+               <Link
+                 href="/login"
+                 className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+               >
+                 Connexion
+               </Link>
             </div>
           </div>
         </div>

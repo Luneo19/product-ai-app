@@ -16,12 +16,18 @@ export default function Home() {
               >
                 Accueil
               </Link>
-              <Link
-                href="/create"
-                className="bg-blue-600 text-white hover:bg-blue-700 px-4 py-2 rounded-md text-sm font-medium transition-colors"
-              >
-                Créer un produit
-              </Link>
+                             <Link
+                 href="/create"
+                 className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+               >
+                 Créer un produit
+               </Link>
+               <Link
+                 href="/login"
+                 className="bg-blue-600 text-white hover:bg-blue-700 px-4 py-2 rounded-md text-sm font-medium transition-colors"
+               >
+                 Connexion
+               </Link>
             </div>
           </div>
         </div>
