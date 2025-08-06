@@ -1,36 +1,118 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Product AI - Générateur de Produits IA
 
-## Getting Started
+Une application Next.js qui utilise l'intelligence artificielle pour générer des fiches produit détaillées à partir d'idées simples.
 
-First, run the development server:
+## ✨ Fonctionnalités
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- 🤖 **Génération IA** : Créez des fiches produit complètes avec OpenAI GPT-4
+- 🎨 **Interface moderne** : Design responsive avec Tailwind CSS
+- ⚡ **Performance optimisée** : Built avec Next.js 15
+- 🛡️ **Gestion d'erreurs** : Interface robuste avec gestion d'erreurs complète
+- 📱 **Responsive** : Fonctionne parfaitement sur tous les appareils
+
+## 🚀 Démarrage rapide
+
+### Prérequis
+
+- Node.js 18+ 
+- Une clé API OpenAI
+
+### Installation
+
+1. **Clonez le projet**
+   ```bash
+   git clone <votre-repo>
+   cd product-ai-app
+   ```
+
+2. **Installez les dépendances**
+   ```bash
+   npm install
+   ```
+
+3. **Configurez les variables d'environnement**
+   
+   Créez un fichier `.env.local` à la racine du projet :
+   ```env
+   OPENAI_API_KEY=votre_clé_api_openai_ici
+   ```
+   
+   > 💡 Obtenez votre clé API sur [platform.openai.com](https://platform.openai.com/api-keys)
+
+4. **Lancez le serveur de développement**
+   ```bash
+   npm run dev
+   ```
+
+5. **Ouvrez votre navigateur**
+   
+   Rendez-vous sur [http://localhost:3000](http://localhost:3000)
+
+## 🛠️ Scripts disponibles
+
+- `npm run dev` - Lance le serveur de développement
+- `npm run build` - Crée une version de production
+- `npm run start` - Lance la version de production
+- `npm run lint` - Vérifie la qualité du code
+
+## 📁 Structure du projet
+
+```
+src/
+├── app/
+│   ├── api/
+│   │   └── generate-product/
+│   │       └── route.ts          # API route pour OpenAI
+│   ├── create/
+│   │   └── page.tsx              # Page de création de produits
+│   ├── globals.css               # Styles globaux
+│   ├── layout.tsx                # Layout principal
+│   └── page.tsx                  # Page d'accueil
+├── public/                       # Ressources statiques
+└── ...
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🎯 Utilisation
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. **Page d'accueil** : Présentation de l'application avec navigation
+2. **Créer un produit** : 
+   - Entrez une description détaillée de votre idée
+   - Cliquez sur "Générer la fiche produit"
+   - Récupérez votre fiche produit complète avec :
+     - Nom du produit
+     - Description détaillée
+     - Caractéristiques techniques
+     - Prix suggéré
+     - Public cible
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🔧 Technologies utilisées
 
-## Learn More
+- **Framework** : Next.js 15
+- **Langage** : TypeScript
+- **Styles** : Tailwind CSS
+- **IA** : OpenAI GPT-4
+- **Déploiement** : Optimisé pour Vercel
 
-To learn more about Next.js, take a look at the following resources:
+## 🚨 Dépannage
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Erreur de clé API
+Si vous voyez "Clé API OpenAI non configurée", vérifiez que :
+- Le fichier `.env.local` existe à la racine
+- La variable `OPENAI_API_KEY` est correctement définie
+- Vous avez redémarré le serveur après la modification
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Erreurs de build
+- Exécutez `npm run lint` pour vérifier les erreurs de code
+- Vérifiez que toutes les dépendances sont installées avec `npm install`
 
-## Deploy on Vercel
+## 📄 Licence
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Ce projet est sous licence MIT.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🤝 Contribution
+
+Les contributions sont les bienvenues ! N'hésitez pas à ouvrir une issue ou une pull request.
+
+---
+
+**Développé avec ❤️ et l'aide de l'IA**
