@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test du Widget Product AI - Version Professionnelle</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .widget-container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        .code-example {
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 6px;
+            padding: 15px;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            margin: 20px 0;
+            overflow-x: auto;
+        }
+        .examples {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .controls {
+            display: flex;
+            gap: 10px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+        .btn {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+        .btn-primary { background: #007bff; color: white; }
+        .btn-primary:hover { background: #0056b3; }
+        .btn-success { background: #28a745; color: white; }
+        .btn-success:hover { background: #1e7e34; }
+        .btn-warning { background: #ffc107; color: black; }
+        .btn-warning:hover { background: #e0a800; }
+        .btn-danger { background: #dc3545; color: white; }
+        .btn-danger:hover { background: #c82333; }
+        .log-container {
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 6px;
+            padding: 15px;
+            max-height: 300px;
+            overflow-y: auto;
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+        }
+        .log-entry {
+            margin: 5px 0;
+            padding: 5px;
+            border-radius: 3px;
+        }
+        .log-info { background: #d1ecf1; color: #0c5460; }
+        .log-success { background: #d4edda; color: #155724; }
+        .log-warning { background: #fff3cd; color: #856404; }
+        .log-error { background: #f8d7da; color: #721c24; }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        .feature-card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-left: 4px solid #007bff;
+        }
+        .feature-card h3 {
+            margin-top: 0;
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🧪 Test du Widget Product AI - Version Professionnelle</h1>
+        <p>Cette page démontre toutes les fonctionnalités avancées du widget d'intégration.</p>
+    </div>
+
+    <!-- Fonctionnalités -->
+    <div class="widget-container">
+        <h2>🚀 Fonctionnalités du widget</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <h3>✅ Intégration simple</h3>
+                <p>Une seule ligne de code pour intégrer le widget</p>
+            </div>
+            <div class="feature-card">
+                <h3>✅ Paramètres configurables</h3>
+                <p>tenant, sku, api-key, debug, theme, width, height</p>
+            </div>
+            <div class="feature-card">
+                <h3>✅ Communication sécurisée</h3>
+                <p>Vérification d'origine et sandbox sécurisé</p>
+            </div>
+            <div class="feature-card">
+                <h3>✅ Événements personnalisés</h3>
+                <p>Écoutez les actions du widget en temps réel</p>
+            </div>
+            <div class="feature-card">
+                <h3>✅ Redimensionnement</h3>
+                <p>API pour ajuster la taille dynamiquement</p>
+            </div>
+            <div class="feature-card">
+                <h3>✅ Mode debug</h3>
+                <p>Logs détaillés pour le développement</p>
+            </div>
+            <div class="feature-card">
+                <h3>✅ Responsive</h3>
+                <p>S'adapte automatiquement aux mobiles</p>
+            </div>
+            <div class="feature-card">
+                <h3>✅ Sandbox sécurisé</h3>
+                <p>Protection contre les attaques XSS</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Utilisation simple -->
+    <div class="widget-container">
+        <h2>📋 Utilisation simple</h2>
+        <p>Ajoutez ce code HTML à votre site web :</p>
+        <div class="code-example">
+&lt;script src="https://product-ai-app-hdbl.vercel.app/embed.js" 
+        data-tenant="demo" 
+        data-sku="product-123"
+        data-api-key="your-api-key"
+        data-debug="true"
+        data-theme="light"&gt;&lt;/script&gt;
+        </div>
+    </div>
+
+    <!-- Exemples de widgets -->
+    <div class="examples">
+        <div class="widget-container">
+            <h3>Exemple 1 : Configuration de base</h3>
+            <script src="https://product-ai-app-hdbl.vercel.app/embed.js" 
+                    data-tenant="demo" 
+                    data-sku="product-123"></script>
+        </div>
+
+        <div class="widget-container">
+            <h3>Exemple 2 : Mode debug activé</h3>
+            <script src="https://product-ai-app-hdbl.vercel.app/embed.js" 
+                    data-tenant="test" 
+                    data-sku="smartphone-eco"
+                    data-debug="true"></script>
+        </div>
+
+        <div class="widget-container">
+            <h3>Exemple 3 : Thème sombre</h3>
+            <script src="https://product-ai-app-hdbl.vercel.app/embed.js" 
+                    data-tenant="dark" 
+                    data-sku="night-mode"
+                    data-theme="dark"></script>
+        </div>
+
+        <div class="widget-container">
+            <h3>Exemple 4 : Taille personnalisée</h3>
+            <script src="https://product-ai-app-hdbl.vercel.app/embed.js" 
+                    data-tenant="custom" 
+                    data-sku="large-widget"
+                    data-width="400px"
+                    data-height="500px"></script>
+        </div>
+    </div>
+
+    <!-- Contrôles et API -->
+    <div class="widget-container">
+        <h2>🎮 Contrôles et API</h2>
+        <p>Utilisez ces boutons pour tester l'API du widget :</p>
+        
+        <div class="controls">
+            <button class="btn btn-primary" onclick="resizeWidget('demo-product-123', '300px', '400px')">
+                Redimensionner (300x400)
+            </button>
+            <button class="btn btn-success" onclick="resizeWidget('demo-product-123', '100%', '600px')">
+                Redimensionner (100%x600)
+            </button>
+            <button class="btn btn-warning" onclick="sendMessage('demo-product-123', 'test', {message: 'Hello from parent!'})">
+                Envoyer message
+            </button>
+            <button class="btn btn-danger" onclick="destroyWidget('demo-product-123')">
+                Détruire widget
+            </button>
+        </div>
+
+        <div class="controls">
+            <button class="btn btn-primary" onclick="resizeWidget('test-smartphone-eco', '500px', '300px')">
+                Redimensionner Test (500x300)
+            </button>
+            <button class="btn btn-success" onclick="resizeWidget('test-smartphone-eco', '100%', '600px')">
+                Redimensionner Test (100%x600)
+            </button>
+        </div>
+    </div>
+
+    <!-- Logs des événements -->
+    <div class="widget-container">
+        <h2>📊 Logs des événements</h2>
+        <p>Événements émis par les widgets :</p>
+        <div id="logs" class="log-container"></div>
+        <div class="controls">
+            <button class="btn btn-primary" onclick="clearLogs()">Effacer les logs</button>
+        </div>
+    </div>
+
+    <!-- Documentation -->
+    <div class="widget-container">
+        <h2>📚 Documentation complète</h2>
+        
+        <h3>Paramètres disponibles</h3>
+        <ul>
+            <li><strong>data-tenant</strong> : Identifiant du tenant/client (requis)</li>
+            <li><strong>data-sku</strong> : Référence du produit (requis)</li>
+            <li><strong>data-api-key</strong> : Clé API pour l'authentification</li>
+            <li><strong>data-debug</strong> : Active les logs détaillés (true/false)</li>
+            <li><strong>data-theme</strong> : Thème de l'interface (light/dark)</li>
+            <li><strong>data-width</strong> : Largeur du widget (px, %, auto)</li>
+            <li><strong>data-height</strong> : Hauteur du widget (px, %, auto)</li>
+        </ul>
+        
+        <h3>Événements disponibles</h3>
+        <ul>
+            <li><strong>widget:ready</strong> : Widget initialisé</li>
+            <li><strong>widget:loaded</strong> : Iframe chargée</li>
+            <li><strong>widget:resized</strong> : Widget redimensionné</li>
+            <li><strong>widget:action</strong> : Action utilisateur</li>
+            <li><strong>widget:product_created</strong> : Produit créé</li>
+            <li><strong>widget:error</strong> : Erreur survenue</li>
+            <li><strong>widget:destroyed</strong> : Widget détruit</li>
+        </ul>
+        
+        <h3>API JavaScript</h3>
+        <div class="code-example">
+// Accéder à une instance du widget
+const widget = ProductAIWidget.get('tenant-sku');
+
+// Redimensionner le widget
+ProductAIWidget.resize('tenant-sku', '500px', '400px', true);
+
+// Envoyer un message au widget
+ProductAIWidget.sendMessage('tenant-sku', 'action', {data: 'value'});
+
+// Détruire le widget
+ProductAIWidget.destroy('tenant-sku');
+        </div>
+    </div>
+
+    <script>
+        // Configuration des logs
+        const logsContainer = document.getElementById('logs');
+        
+        function addLog(message, type = 'info') {
+            const logEntry = document.createElement('div');
+            logEntry.className = `log-entry log-${type}`;
+            logEntry.textContent = `[${new Date().toLocaleTimeString()}] ${message}`;
+            logsContainer.appendChild(logEntry);
+            logsContainer.scrollTop = logsContainer.scrollHeight;
+        }
+        
+        function clearLogs() {
+            logsContainer.innerHTML = '';
+        }
+        
+        // Écoute des événements du widget
+        const widgetEvents = [
+            'widget:ready', 'widget:loaded', 'widget:resized', 
+            'widget:action', 'widget:product_created', 'widget:error', 'widget:destroyed'
+        ];
+        
+        widgetEvents.forEach(eventName => {
+            document.addEventListener(eventName, (event) => {
+                addLog(`${eventName}: ${JSON.stringify(event.detail)}`, 
+                       eventName.includes('error') ? 'error' : 
+                       eventName.includes('ready') || eventName.includes('loaded') ? 'success' : 'info');
+            });
+        });
+        
+        // Fonctions de contrôle
+        function resizeWidget(id, width, height) {
+            if (window.ProductAIWidget && window.ProductAIWidget.resize) {
+                window.ProductAIWidget.resize(id, width, height, true);
+                addLog(`Redimensionnement de ${id} vers ${width}x${height}`, 'info');
+            } else {
+                addLog(`Widget ${id} non trouvé ou API non disponible`, 'warning');
+            }
+        }
+        
+        function sendMessage(id, type, data) {
+            if (window.ProductAIWidget && window.ProductAIWidget.sendMessage) {
+                window.ProductAIWidget.sendMessage(id, type, data);
+                addLog(`Message envoyé à ${id}: ${type}`, 'info');
+            } else {
+                addLog(`Widget ${id} non trouvé ou API non disponible`, 'warning');
+            }
+        }
+        
+        function destroyWidget(id) {
+            if (window.ProductAIWidget && window.ProductAIWidget.destroy) {
+                window.ProductAIWidget.destroy(id);
+                addLog(`Widget ${id} détruit`, 'warning');
+            } else {
+                addLog(`Widget ${id} non trouvé ou API non disponible`, 'warning');
+            }
+        }
+        
+        // Log initial
+        addLog('Page de test chargée - Widgets initialisés', 'success');
+    </script>
+</body>
+</html> 

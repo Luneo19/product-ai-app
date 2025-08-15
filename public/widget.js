@@ -1,0 +1,48 @@
+// public/widget.js
+(function(){
+  // Récupère la clé API depuis data-api-key
+  const apiKey = document.currentScript.getAttribute('data-api-key');
+  if(!apiKey) return console.error('Widget AI : data-api-key manquante');
+
+  document.addEventListener('DOMContentLoaded',()=>{
+    // Création du conteneur
+    const c = document.createElement('div');
+    c.style.cssText = 'border:1px solid #ddd;padding:16px;max-width:400px;font-family:sans-serif;background:#fff;border-radius:8px;box-shadow:0 2px 4px rgba(0,0,0,0.1)';
+    c.innerHTML = `
+      <h3>Personnalisation AI</h3>
+      <input id="ai-prompt" type="text" placeholder="Décrivez votre produit..." style="width:100%;padding:8px;border:1px solid #ccc;border-radius:4px"/>
+      <button id="ai-gen" style="margin-top:8px;padding:8px 12px;background:#3498db;color:#fff;border:none;border-radius:4px;cursor:pointer">Générer</button>
+      <div id="ai-result" style="margin-top:16px;text-align:center"></div>
+    `;
+    document.body.appendChild(c);
+
+    c.querySelector('#ai-gen').addEventListener('click',async function(){
+      const prompt = c.querySelector('#ai-prompt').value.trim();
+      const resultDiv = c.querySelector('#ai-result');
+      if(!prompt){
+        resultDiv.textContent = 'Merci de saisir une description.';
+        return;
+      }
+      resultDiv.textContent = '⏳ Génération en cours...';
+      this.disabled = true;
+      try {
+        const res = await fetch('http://localhost:3000/api/generate-image',{
+          method:'POST',
+          headers:{
+            'Content-Type':'application/json',
+            'x-api-key': apiKey
+          },
+          body: JSON.stringify({ prompt })
+        });
+        const json = await res.json();
+        if(!res.ok) throw new Error(json.error||'Erreur');
+        resultDiv.innerHTML = `<img src="${json.image_url}" style="max-width:100%;border-radius:4px"/>`;
+      } catch(err){
+        console.error(err);
+        resultDiv.textContent = 'Erreur lors de la génération.';
+      } finally {
+        this.disabled = false;
+      }
+    });
+  });
+})();
